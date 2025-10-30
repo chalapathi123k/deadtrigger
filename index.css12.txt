@@ -1,0 +1,66 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e272e;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+/* Hide the checkbox */
+#switch {
+  display: none;
+}
+
+/* Bulb */
+.bulb {
+  width: 120px;
+  height: 120px;
+  background: #555;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 0 25px #000 inset;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* Bulb glow (when on) */
+#switch:checked + .bulb {
+  background: #ffeb3b;
+  box-shadow: 0 0 40px 10px #ffee58, 0 0 80px 30px #fff176;
+}
+
+/* Light reflection inside bulb */
+.light {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  filter: blur(5px);
+}
+
+/* Status text */
+.status {
+  margin-top: 1.5rem;
+  color: #ccc;
+}
